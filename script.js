@@ -5,7 +5,7 @@ let timeLeft = 480;
 let timerInterval;
 let currentWordIndex = 0;
 let shuffledWords = [];
-let mistakes = []; // Массив барои сабти хатоҳо
+let mistakes = []; 
 
 const levelData = {
     1: [
@@ -147,7 +147,12 @@ function nextQuestion() {
     document.getElementById('tj-word').innerText = shuffledWords[currentWordIndex].tj;
     const inputField = document.getElementById('en-answer');
     inputField.value = "";
-    inputField.focus(); 
+    
+    // Ислоҳи клавиатура барои телефон:
+    setTimeout(() => {
+        inputField.focus();
+    }, 100); 
+
     document.getElementById('score-counter').innerText = `Score: ${score}`;
 }
 
