@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English Levels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="auth-screen" class="container">
+            <h1 class="fade-in">Хуш омадед</h1>
+            <input type="text" id="username-input" placeholder="Номи худро нависед...">
+            <button onclick="login()" class="btn-main">Вуруд</button>
+        </div>
+
+        <div id="main-menu" class="container hidden">
+            <h2 id="welcome-msg"></h2>
+            <div class="menu-buttons">
+                <button onclick="showLevels()" class="btn-main pulse">Start</button>
+                <button onclick="showResults()" class="btn-secondary">Result</button>
+            </div>
+        </div>
+
+        <div id="level-screen" class="container hidden">
+            <h3>Интихоби Левел</h3>
+            <div id="levels-grid" class="grid"></div>
+            <button onclick="backToMenu()" class="btn-back">Бозгашт</button>
+        </div>
+
+        <div id="quiz-screen" class="container hidden">
+            <div class="quiz-header">
+                <span id="timer">08:00</span>
+                <span id="score-counter">Score: 0</span>
+            </div>
+            <div class="question-box">
+                <p>Тарҷума кунед:</p>
+                <h2 id="tj-word"></h2>
+                <input type="text" id="en-answer" placeholder="Инҷо нависед..." autocomplete="off">
+                <button onclick="checkAnswer()" class="btn-main">Next</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="container hidden">
+            <h3>Натиҷаҳои шумо</h3>
+            <div id="stats-content"></div>
+            
+            <button onclick="toggleMistakes()" id="btn-mistakes" class="btn-secondary hidden">Намоиши хатогиҳо</button>
+            
+            <div id="mistakes-list" class="hidden" style="text-align: left; margin-top: 15px; max-height: 250px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <button onclick="backToMenu()" class="btn-main">Меню</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
