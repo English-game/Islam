@@ -3,101 +3,137 @@
     --secondary: #a29bfe;
     --bg: #0f172a;
     --glass: rgba(255, 255, 255, 0.1);
+    --error: #ff4757;
+    --success: #2ed573;
 }
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden; /* Барои он ки саҳифа ба паҳлу наларзад */
 }
 
 .container {
-    background: var/(--glass);
+    background: var(--glass); /* Ислоҳ шуд */
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 90%;
-    max-width: 500px;
+    max-width: 450px;
     animation: slideUp 0.5s ease;
+    box-sizing: border-box;
 }
 
 .hidden { display: none; }
 
 input {
-    width: 80%;
-    padding: 12px;
+    width: 100%; /* Дар телефон 100% қулайтар аст */
+    padding: 15px;
     margin: 20px 0;
-    border-radius: 10px;
-    border: none;
-    background: rgba(255,255,255,0.2);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: rgba(255,255,255,0.15);
     color: white;
     font-size: 1.1rem;
     outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input:focus {
+    background: rgba(255,255,255,0.25);
+    border-color: var(--secondary);
 }
 
 .btn-main, .btn-secondary, .btn-back {
-    padding: 12px 30px;
-    border-radius: 10px;
+    padding: 15px 25px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
-    margin: 10px;
+    margin: 10px 5px;
+    font-size: 1rem;
+    width: auto;
 }
 
 .btn-main { background: var(--primary); color: white; }
-.btn-main:hover { transform: scale(1.05); background: #5b4cc4; }
+.btn-secondary { background: var(--glass); color: white; border: 1px dashed var(--secondary); }
 
+/* Аниматсияи тугмаҳо дар телефон */
+.btn-main:active, .btn-secondary:active {
+    transform: scale(0.95);
+}
+
+/* Стили Grid барои телефон */
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr); /* 4 адад дар як қатор барои телефон */
+    gap: 12px;
     margin-top: 20px;
 }
 
 .level-btn {
-    padding: 15px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
+    aspect-ratio: 1/1; /* Тугмаҳоро квадрат мекунад */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
-.level-btn.locked { opacity: 0.4; cursor: not-allowed; }
-.level-btn.unlocked { background: var(--primary); }
+.level-btn.unlocked { 
+    background: var(--primary); 
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
 
+.level-btn.locked { opacity: 0.3; cursor: not-allowed; filter: grayscale(1); }
+
+/* Рӯйхати хатогиҳо дар экран */
+#mistakes-list p {
+    font-size: 0.9rem;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    margin: 0;
+}
+
+/* Responsive барои экранҳои хурдтар */
+@media (max-width: 400px) {
+    .grid { grid-template-columns: repeat(3, 1fr); } /* Дар телефонҳои хеле хурд 3-тоӣ */
+    .container { padding: 1.5rem; }
+}
+
+/* Animations */
 @keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
+    from { transform: translateY(30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-.pulse { animation: pulseAnim 2s infinite; }
-@keyframes pulseAnim {
-    0% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(108, 92, 231, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0); }
-}
-/* Аниматсия ҳангоми ҷавоби нодуруст (ларзиш) */
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-10px); }
-    75% { transform: translateX(10px); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
 }
 
 .error-shake {
     animation: shake 0.3s ease;
-    border: 2px solid #ff4757 !important;
+    border: 2px solid var(--error) !important;
 }
 
-/* Аниматсия ҳангоми ҷавоби дуруст */
 .correct-glow {
-    border: 2px solid #2ed573 !important;
-    box-shadow: 0 0 15px #2ed573;
+    border: 2px solid var(--success) !important;
+    box-shadow: 0 0 20px rgba(46, 213, 115, 0.4);
 }
