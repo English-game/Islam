@@ -67,7 +67,7 @@ const levelData = {
         {tj: "додан", en: "give"}, {tj: "ангур", en: "grape"}, {tj: "алаф", en: "grass"},
         {tj: "хокистаранг", en: "gray"}, {tj: "сабз", en: "green"}, {tj: "кулох", en: "hat"},
         {tj: "ба у (зан)", en: "her"}, {tj: "мактаб", en: "high school"}
-    ]
+    ],
     4: [
         {tj: "бо вай, вайро (мард)", en: "him"}, {tj: "вазифаи хонаги", en: "homework"}, {tj: "хона", en: "house"},
         {tj: "мухим", en: "important"}, {tj: "забон", en: "language"}, {tj: "насаб", en: "last name"},
