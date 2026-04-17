@@ -56,17 +56,17 @@ const levelData = {
         {tj: "такси", en: "taxi"}, {tj: "омузонидан", en: "teach"}, {tj: "ба онхо, онхоро", en: "them"},
         {tj: "телевизор", en: "television"}, {tj: "ба (самт)", en: "to"}, {tj: "дар ончо", en: "there"},
         {tj: "сафари хидмати", en: "trip"}, {tj: "шустан", en: "wash"}, {tj: "хостан", en: "want"},
-        {tj: "кор кардан", en: "work"}, {tj: "сол", en: "year"}, {tj: "вараки дафтар", en: "a piece of paper"},
-        {tj: "хам", en: "also"}, {tj: "чавоб додан", en: "answer"}, {tj: "банана", en: "banana"},
+        {tj: "кор кардан", en: "work"}, {tj: "сол", en: "year"}, {tj: "як вараки дафтар", en: "a piece of paper"},
+        {tj: "хам, так же", en: "also"}, {tj: "чавоб додан", en: "answer"}, {tj: "банана", en: "banana"},
         {tj: "хомуш бошед", en: "be quiet"}, {tj: "сиех", en: "black"}, {tj: "кабуд", en: "blue"},
         {tj: "кахваранг", en: "brown"}, {tj: "харидан", en: "buy"}, {tj: "гурба", en: "cat"},
         {tj: "пушидан", en: "close"}, {tj: "абр", en: "cloud"}, {tj: " палто", en: "coat"},
-        {tj: "коллеч", en: "college"}, {tj: "ранг", en: "color"}, {tj: "дар", en: "door"},
-        {tj: "мошин рондан", en: "drive"}, {tj: "ангезанда", en: "exciting"}, {tj: "писандида", en: "favorite"},
-        {tj: "фарш", en: "floor"}, {tj: "гул", en: "flower"}, {tj: "фаромуш кардан", en: "forget"},
+        {tj: "коллеч", en: "college"}, {tj: "ранг", en: "color"}, {tj: "дари хона", en: "door"},
+        {tj: "мошин рондан", en: "drive"}, {tj: "ангезанда", en: "exciting"}, {tj: "писандида, махбуб", en: "favorite"},
+        {tj: "фарш, ошена", en: "floor"}, {tj: "гул", en: "flower"}, {tj: "фаромуш кардан", en: "forget"},
         {tj: "додан", en: "give"}, {tj: "ангур", en: "grape"}, {tj: "алаф", en: "grass"},
         {tj: "хокистаранг", en: "gray"}, {tj: "сабз", en: "green"}, {tj: "кулох", en: "hat"},
-        {tj: "ба у (зан)", en: "her"}, {tj: "мактаб", en: "high school"}
+        {tj: "ба у (зан)", en: "her"}, {tj: "мактаби миена", en: "high school"}
     ],
     4: [
         {tj: "бо вай, вайро (мард)", en: "him"}, {tj: "вазифаи хонаги", en: "homework"}, {tj: "хона", en: "house"},
@@ -86,7 +86,26 @@ const levelData = {
         {tj: "хисобчи", en: "bookkeep"}, {tj: "магозаи китоб", en: "bookstore"}, {tj: "аммо, вале", en: "but"},
         {tj: "маданият", en: "culture"}, {tj: "бизнес, кор", en: "business"}, {tj: "иваз кардан", en: "change"},
         {tj: "либос", en: "cloth"}, {tj: "клуб", en: "club"}
-    ]
+    ],
+    5: [
+        {tj: "пухтан", en: "cook"}, {tj: "руз", en: "day"}, {tj: "як нохияи Штати Колумбия", en: "DC"},
+        {tj: "хуроки нисфирузи", en: "dinner"}, {tj: "мекунад", en: "does"}, {tj: "косаву табак шустан", en: "do the dishes"},
+        {tj: "дар давоми", en: "during"}, {tj: "бегохи", en: "evening"}, {tj: "хар як", en: "every"},
+        {tj: "фабрика", en: "factory"}, {tj: "озодона", en: "fluently"}, {tj: "хурок", en: "food"},
+        {tj: "хоричи", en: "foreign"}, {tj: "чумьа", en: "Friday"}, {tj: "бози", en: "game"},
+        {tj: "чои автомобилгузари", en: "garage"}, {tj: "меравад", en: "goes"}, {tj: "рохбаланд", en: "guide"},
+        {tj: "дорад", en: "has"}, {tj: "доштан", en: "have"}, {tj: "лабаратория", en: "laboratory"},
+        {tj: "идора кардан", en: "manage"}, {tj: "идоракунанда, рохбар", en: "manager"}, {tj: "дору, тиб", en: "medicine"},
+        {tj: "Душанбе", en: "Monday"}, {tj: "субх", en: "morning"}, {tj: "кинофилм", en: "movie"},
+        {tj: "мусикинавоз", en: "musician"}, {tj: "навид", en: "news"}, {tj: "шугл, касб", en: "occupation"},
+        {tj: "хавз", en: "pool"}, {tj: "истирохат кардан", en: "relax"}, {tj: "таьмир кардан", en: "repair"},
+        {tj: "савора рафтан", en: "ride"}, {tj: "шанбе", en: "Saturday"}, {tj: "фурухтан", en: "sell"},
+        {tj: "магоза", en: "shop"}, {tj: "сароянда", en: "singer"}, {tj: "нишастан", en: "sit down"},
+        {tj: "истодан", en: "stop"}, {tj: "якшанбе", en: "Sunday"}, {tj: "хуроки бегохи", en: "supper"},
+        {tj: "шино кардан", en: "swim"}, {tj: "панчшанбе", en: "Thursday"}, {tj: "тарчумон", en: "translator"},
+        {tj: "тенис", en: "tennis"}, {tj: "саехат кардан", en: "tour"}, {tj: "сешанбе", en: "Tuesday"},
+        {tj: "намуд", en: "type"}, {tj: "Миллали Мутахид", en: "United Nations"}
+    ]    
 };
 
 let progress = JSON.parse(localStorage.getItem('userProgress')) || { unlocked: 1, history: {} };
