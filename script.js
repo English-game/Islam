@@ -68,6 +68,25 @@ const levelData = {
         {tj: "хокистаранг", en: "gray"}, {tj: "сабз", en: "green"}, {tj: "кулох", en: "hat"},
         {tj: "ба у (зан)", en: "her"}, {tj: "мактаб", en: "high school"}
     ]
+    4: [
+        {tj: "бо вай, вайро (мард)", en: "him"}, {tj: "вазифаи хонаги", en: "homework"}, {tj: "хона", en: "house"},
+        {tj: "мухим", en: "important"}, {tj: "забон", en: "language"}, {tj: "насаб", en: "last name"},
+        {tj: "дароз", en: "long"}, {tj: "дуст доштан", en: "love"}, {tj: "паем, пайгом", en: "message"},
+        {tj: "мусики", en: "music"}, {tj: "хуб", en: "ok"}, {tj: "кушодан", en: "open"},
+        {tj: "ранги норинчи", en: "orange"}, {tj: "ранг кардан", en: "paint"}, {tj: "нок", en: "pear"},
+        {tj: "расм", en: "picture"}, {tj: "картошка", en: "potato"}, {tj: "фиалетовый", en: "purple"},
+        {tj: "сурх", en: "red"}, {tj: "такрор кардан", en: "repeat"}, {tj: "фиристодан", en: "send"},
+        {tj: "куртаи мардона", en: "shirt"}, {tj: "пойафзол", en: "shoe"}, {tj: "нишастан", en: "sit"},
+        {tj: "магоза", en: "store"}, {tj: "кулфинай", en: "strawberry"}, {tj: "аше, (предмет)", en: "subject"},
+        {tj: "дилпур, боваридошта", en: "sure"}, {tj: "бозии футбол", en: "soccer"}, {tj: "гирифтан", en: "take"},
+        {tj: "даста, тим", en: "team"}, {tj: "дарахт", en: "tree"}, {tj: "ба мо, моро", en: "us"},
+        {tj: "истифода бурдан", en: "use"}, {tj: "либос пушидан", en: "wear"}, {tj: "сафед", en: "white"},
+        {tj: "зард", en: "yellow"}, {tj: "баьд", en: "after"}, {tj: "нисфирузи", en: "afternoon"},
+        {tj: "хама", en: "all"}, {tj: "автомобил", en: "auto"}, {tj: "бейсбол", en: "baseball"},
+        {tj: "хисобчи", en: "bookkeep"}, {tj: "магозаи китоб", en: "bookstore"}, {tj: "аммо, вале", en: "but"},
+        {tj: "маданият", en: "culture"}, {tj: "бизнес, кор", en: "business"}, {tj: "иваз кардан", en: "change"},
+        {tj: "либос", en: "cloth"}, {tj: "клуб", en: "club"}
+    ]
 };
 
 let progress = JSON.parse(localStorage.getItem('userProgress')) || { unlocked: 1, history: {} };
