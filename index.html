@@ -8,19 +8,12 @@
     <style>
         * { -webkit-tap-highlight-color: transparent; }
         body { touch-action: manipulation; }
-        /* Услуби иловагӣ барои тугмаҳои натиҷа */
-        .result-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
     <div id="app">
         <div id="auth-screen" class="container">
-            <h1 class="fade-in">Хуш омадед</h1>
+            <h1>Хуш омадед</h1>
             <input type="text" id="username-input" placeholder="Номи худро нависед..." autocomplete="off">
             <button onclick="login()" class="btn-main">Вуруд</button>
         </div>
@@ -28,7 +21,7 @@
         <div id="main-menu" class="container hidden">
             <h2 id="welcome-msg"></h2>
             <div class="menu-buttons">
-                <button onclick="showLevels()" class="btn-main pulse">Start</button>
+                <button onclick="showLevels()" class="btn-main">Start</button>
                 <button onclick="showResults()" class="btn-secondary">Result</button>
             </div>
         </div>
@@ -47,192 +40,22 @@
             <div class="question-box">
                 <p>Тарҷума кунед:</p>
                 <h2 id="tj-word"></h2>
-                <input type="text" 
-                       id="en-answer" 
-                       placeholder="Инҷо нависед..." 
-                       autocomplete="off" 
-                       autocorrect="off" 
-                       autocapitalize="off" 
-                       spellcheck="false">
+                <input type="text" id="en-answer" placeholder="Инҷо нависед..." autocomplete="off">
                 <button onclick="checkAnswer()" class="btn-main">Next</button>
             </div>
         </div>
 
         <div id="result-screen" class="container hidden">
-            <h3>Натиҷаҳои шумо</h3>
+            <h3>Натиҷаҳо</h3>
             <div id="stats-content"></div>
-            
             <div class="result-actions">
-                <button onclick="toggleMistakes()" id="btn-mistakes" class="btn-secondary hidden">Намоиши хатогиҳо</button>
-                
-                <button onclick="startQuiz(currentLevel)" class="btn-main" style="background: #f1c40f; color: #000;">🔄 Такрор кардан</button>
-                
-                <button onclick="backToMenu()" class="btn-secondary">Менюи асосӣ</button>
+                <button onclick="toggleMistakes()" id="btn-mistakes" class="btn-secondary hidden">Хатогиҳо</button>
+                <button onclick="startQuiz(currentLevel)" class="btn-repeat">🔄 Такрор кардан</button>
+                <button onclick="backToMenu()" class="btn-main">Меню</button>
             </div>
-            
-            <div id="mistakes-list" class="hidden" style="text-align: left; margin-top: 15px; max-height: 200px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
-            </div>
+            <div id="mistakes-list" class="hidden"></div>
         </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="tg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Learn English Levels</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * { -webkit-tap-highlight-color: transparent; }
-        body { touch-action: manipulation; }
-        /* Услуби иловагӣ барои тугмаҳои натиҷа */
-        .result-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div id="auth-screen" class="container">
-            <h1 class="fade-in">Хуш омадед</h1>
-            <input type="text" id="username-input" placeholder="Номи худро нависед..." autocomplete="off">
-            <button onclick="login()" class="btn-main">Вуруд</button>
-        </div>
-
-        <div id="main-menu" class="container hidden">
-            <h2 id="welcome-msg"></h2>
-            <div class="menu-buttons">
-                <button onclick="showLevels()" class="btn-main pulse">Start</button>
-                <button onclick="showResults()" class="btn-secondary">Result</button>
-            </div>
-        </div>
-
-        <div id="level-screen" class="container hidden">
-            <h3>Интихоби Левел</h3>
-            <div id="levels-grid" class="grid"></div>
-            <button onclick="backToMenu()" class="btn-back">Бозгашт</button>
-        </div>
-
-        <div id="quiz-screen" class="container hidden">
-            <div class="quiz-header">
-                <span id="timer">08:00</span>
-                <span id="score-counter">Score: 0</span>
-            </div>
-            <div class="question-box">
-                <p>Тарҷума кунед:</p>
-                <h2 id="tj-word"></h2>
-                <input type="text" 
-                       id="en-answer" 
-                       placeholder="Инҷо нависед..." 
-                       autocomplete="off" 
-                       autocorrect="off" 
-                       autocapitalize="off" 
-                       spellcheck="false">
-                <button onclick="checkAnswer()" class="btn-main">Next</button>
-            </div>
-        </div>
-
-        <div id="result-screen" class="container hidden">
-            <h3>Натиҷаҳои шумо</h3>
-            <div id="stats-content"></div>
-            
-            <div class="result-actions">
-                <button onclick="toggleMistakes()" id="btn-mistakes" class="btn-secondary hidden">Намоиши хатогиҳо</button>
-                
-                <button onclick="startQuiz(currentLevel)" class="btn-main" style="background: #f1c40f; color: #000;">🔄 Такрор кардан</button>
-                
-                <button onclick="backToMenu()" class="btn-secondary">Менюи асосӣ</button>
-            </div>
-            
-            <div id="mistakes-list" class="hidden" style="text-align: left; margin-top: 15px; max-height: 200px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="tg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Learn English Levels</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * { -webkit-tap-highlight-color: transparent; }
-        body { touch-action: manipulation; }
-        /* Услуби иловагӣ барои тугмаҳои натиҷа */
-        .result-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div id="auth-screen" class="container">
-            <h1 class="fade-in">Хуш омадед</h1>
-            <input type="text" id="username-input" placeholder="Номи худро нависед..." autocomplete="off">
-            <button onclick="login()" class="btn-main">Вуруд</button>
-        </div>
-
-        <div id="main-menu" class="container hidden">
-            <h2 id="welcome-msg"></h2>
-            <div class="menu-buttons">
-                <button onclick="showLevels()" class="btn-main pulse">Start</button>
-                <button onclick="showResults()" class="btn-secondary">Result</button>
-            </div>
-        </div>
-
-        <div id="level-screen" class="container hidden">
-            <h3>Интихоби Левел</h3>
-            <div id="levels-grid" class="grid"></div>
-            <button onclick="backToMenu()" class="btn-back">Бозгашт</button>
-        </div>
-
-        <div id="quiz-screen" class="container hidden">
-            <div class="quiz-header">
-                <span id="timer">08:00</span>
-                <span id="score-counter">Score: 0</span>
-            </div>
-            <div class="question-box">
-                <p>Тарҷума кунед:</p>
-                <h2 id="tj-word"></h2>
-                <input type="text" 
-                       id="en-answer" 
-                       placeholder="Инҷо нависед..." 
-                       autocomplete="off" 
-                       autocorrect="off" 
-                       autocapitalize="off" 
-                       spellcheck="false">
-                <button onclick="checkAnswer()" class="btn-main">Next</button>
-            </div>
-        </div>
-
-        <div id="result-screen" class="container hidden">
-            <h3>Натиҷаҳои шумо</h3>
-            <div id="stats-content"></div>
-            
-            <div class="result-actions">
-                <button onclick="toggleMistakes()" id="btn-mistakes" class="btn-secondary hidden">Намоиши хатогиҳо</button>
-                
-                <button onclick="startQuiz(currentLevel)" class="btn-main" style="background: #f1c40f; color: #000;">🔄 Такрор кардан</button>
-                
-                <button onclick="backToMenu()" class="btn-secondary">Менюи асосӣ</button>
-            </div>
-            
-            <div id="mistakes-list" class="hidden" style="text-align: left; margin-top: 15px; max-height: 200px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
-            </div>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
