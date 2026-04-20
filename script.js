@@ -233,30 +233,55 @@ function startTimer() {
     }, 1000);
 }
 
+// ... (коди болоии шумо бетағйир мемонад)
+
 function endQuiz() {
     clearInterval(timerInterval);
     document.getElementById('quiz-screen').classList.add('hidden');
     document.getElementById('result-screen').classList.remove('hidden');
     
+    // Ҳисоби фоизи гузариш (масалан 85%)
+    const totalWords = shuffledWords.length;
+    const passScore = Math.floor(totalWords * 0.85); 
+
     document.getElementById('stats-content').innerHTML = `
-        <p style="font-size: 1.2rem;">Балл: <b>${score}</b> аз ${shuffledWords.length}</p>
-        <p>${score >= 42 ? "✅ Гузаштед!" : "❌ Кӯшиш кунед (42 лозим)."}</p>
+        <p style="font-size: 1.2rem;">Балл: <b>${score}</b> аз ${totalWords}</p>
+        <p>${score >= passScore ? "✅ Гузаштед!" : "❌ Кӯшиш кунед (" + passScore + " лозим)."}</p>
     `;
 
+    // Нишон додани тугма ва рӯйхати хатогиҳо
     if (mistakes.length > 0) {
         document.getElementById('btn-mistakes').classList.remove('hidden');
         document.getElementById('mistakes-list').innerHTML = "<strong>Хатогиҳо:</strong><br>" + 
             mistakes.map(m => `<p style="font-size: 0.85rem; border-bottom: 1px solid #444; padding: 3px;">
                 ${m.tj} → <span style="color: #2ed573;">${m.en}</span> (Шумо: <span style="color: #ff4757;">${m.user}</span>)
             </p>`).join('');
+    } else {
+        document.getElementById('btn-mistakes').classList.add('hidden');
     }
 
-    if(score >= 42 && currentLevel === progress.unlocked && progress.unlocked < 20) {
+    // Захираи прогресс
+    if(score >= passScore && currentLevel === progress.unlocked && progress.unlocked < 20) {
         progress.unlocked++;
     }
     progress.history[`Level ${currentLevel}`] = score;
     localStorage.setItem('userProgress', JSON.stringify(progress));
 }
+
+function backToMenu() {
+    // Пинҳон кардани ҳамаи контейнерҳо
+    document.querySelectorAll('.container').forEach(c => c.classList.add('hidden'));
+    
+    // Тоза кардани рӯйхати хатогиҳо барои дафъаи оянда
+    document.getElementById('mistakes-list').classList.add('hidden');
+    document.getElementById('btn-mistakes').classList.add('hidden');
+    
+    // Намоиши менюи асосӣ
+    document.getElementById('main-menu').classList.remove('hidden');
+}
+
+// Функсияи startQuiz аллакай дар коди шумо ҳама чизро reset мекунад, 
+// бинобар ин тугмаи HTML "startQuiz(currentLevel)" дуруст кор хоҳад кард.
 
 function toggleMistakes() {
     const list = document.getElementById('mistakes-list');
