@@ -105,7 +105,34 @@ const levelData = {
         {tj: "шино кардан", en: "swim"}, {tj: "панчшанбе", en: "Thursday"}, {tj: "тарчумон", en: "translator"},
         {tj: "тенис", en: "tennis"}, {tj: "саехат кардан", en: "tour"}, {tj: "сешанбе", en: "Tuesday"},
         {tj: "намуд", en: "type"}, {tj: "Миллали Мутахид", en: "United Nations"}
-    ]    
+    ],
+6: [
+    {tj: "пешхизмат (мард)", en: "waiter"}, {tj: "хафта", en: "week"},
+    {tj: "рузхои истирохати", en: "weekend"}, {tj: "чоршанбе", en: "wednesday"},
+    {tj: "пиеда гаштан", en: "walk"}, {tj: "коргар", en: "worker"},
+    {tj: "нон", en: "bread"}, {tj: "торт", en: "cake"},
+    {tj: "чуча", en: "chicken"}, {tj: "даромадан", en: "come in"},
+    {tj: "каймок", en: "cream"}, {tj: "аьло", en: "excellent"},
+    {tj: "машхур", en: "famous"}, {tj: "мохи", en: "fish"},
+    {tj: "вакти холиги", en: "free time"}, {tj: "картошкаи бирен", en: "french fries"},
+    {tj: "хуроки нисфирузи", en: "have dinner"}, {tj: "вакти хуш гузарони", en: "have a good time"},
+    {tj: "яхмос", en: "ice cream"}, {tj: "гушти гов", en: "meat"},
+    {tj: "шир", en: "milk"}, {tj: "фармоиш додан", en: "order"},
+    {tj: "мехрубон", en: "polite"}, {tj: "маькул донистан", en: "prefer"},
+    {tj: "биринч", en: "rice"}, {tj: "гушти кима", en: "steak"},
+    {tj: "хуриш", en: "salad"}, {tj: "нушоки газдор", en: "soda"},
+    {tj: "истодан", en: "stay"}, {tj: "шакар", en: "sugar"},
+    {tj: "супермаркет", en: "supermarket"}, {tj: "чой", en: "tea"},
+    {tj: "аз они онхо", en: "their"}, {tj: "баьд", en: "then"},
+    {tj: "фикр кардан", en: "think"}, {tj: "фахмидан", en: "understand"},
+    {tj: "пешхизмат (зан)", en: "waitress"}, {tj: "об", en: "water"},
+    {tj: "даст", en: "arm"}, {tj: "рассом", en: "artist"},
+    {tj: "хиебон", en: "avenue"}, {tj: "бонк", en: "bank"},
+    {tj: "сабад", en: "basket"}, {tj: "кутти", en: "box"},
+    {tj: "кахвахона", en: "cafe"}, {tj: "манах", en: "chin"},
+    {tj: "кудак", en: "child"}, {tj: "кудакон", en: "children"},
+    {tj: "калисо", en: "church"}, {tj: "гуш", en: "ear"}
+]
 };
 
 let progress = JSON.parse(localStorage.getItem('userProgress')) || { unlocked: 1, history: {} };
