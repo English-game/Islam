@@ -132,6 +132,33 @@ const levelData = {
     {tj: "кахвахона", en: "cafe"}, {tj: "манах", en: "chin"},
     {tj: "кудак", en: "child"}, {tj: "кудакон", en: "children"},
     {tj: "калисо", en: "church"}, {tj: "гуш", en: "ear"}
+],
+    7: [
+    {tj: "чашм", en: "eye"}, {tj: "пойхо", en: "feet"},
+    {tj: "ангушти даст", en: "finger"}, {tj: "мисол", en: "for example"},
+    {tj: "пой", en: "foot"}, {tj: "истакон", en: "glass"},
+    {tj: "даст", en: "hand"}, {tj: "ход дог", en: "hot dog"},
+    {tj: "мехмонхона (гостиница)", en: "hotel"}, {tj: "банди пой", en: "leg"},
+    {tj: "куттии хатпартои", en: "mailbox"}, {tj: "бисер", en: "many"},
+    {tj: "мардон, мардхо", en: "men"}, {tj: "замонави", en: "modern"},
+    {tj: "дахон", en: "mouth"}, {tj: "осорхона", en: "museum"},
+    {tj: "бонки милли", en: "national bank"}, {tj: "бини", en: "nose"},
+    {tj: "дар он чо", en: "over there"}, {tj: "расм", en: "painting"},
+    {tj: "боги мадани", en: "park"}, {tj: "одамон", en: "people"},
+    {tj: "одам", en: "person"}, {tj: "табак", en: "plate"},
+    {tj: "почта", en: "post office"}, {tj: "сабт кардан", en: "record"},
+    {tj: "дар ин чо", en: "right here"}, {tj: "меьмор", en: "sculptor"},
+    {tj: "меьмори", en: "sculpture"}, {tj: "нишон додан", en: "show"},
+    {tj: "варзиш", en: "sport"}, {tj: "майдони варзиши", en: "stadium"},
+    {tj: "истгох", en: "station"}, {tj: "куча", en: "street"},
+    {tj: "миз", en: "table"}, {tj: "дандонхо", en: "teeth"},
+    {tj: "он, хамон", en: "that"}, {tj: "театр", en: "theater"},
+    {tj: "инхо", en: "these"}, {tj: "чиз, асбоб", en: "thing"},
+    {tj: "онхо", en: "those"}, {tj: "номгуй, титул", en: "title"},
+    {tj: "ангушти пой", en: "toe"}, {tj: "имшаб", en: "tonight"},
+    {tj: "дандон", en: "tooth"}, {tj: "шахрак, шахрча", en: "town"},
+    {tj: "хабар гирифтан", en: "visit"}, {tj: "занхо", en: "women"},
+    {tj: "девор", en: "wall"}, {tj: "даста", en: "band"}
 ]
 };
 
