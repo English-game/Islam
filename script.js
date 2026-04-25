@@ -159,7 +159,34 @@ const levelData = {
     {tj: "дандон", en: "tooth"}, {tj: "шахрак, шахрча", en: "town"},
     {tj: "хабар гирифтан", en: "visit"}, {tj: "занхо", en: "women"},
     {tj: "девор", en: "wall"}, {tj: "даста", en: "band"}
-]
+],
+  8: [
+    {tj: "баскетбол", en: "basketball"}, {tj: "дуст, ошик", en: "boyfriend"},
+    {tj: "мураби", en: "coach"}, {tj: "ранга", en: "colorful"},
+    {tj: "лугат", en: "dictionary"}, {tj: "куртаи занона", en: "dress"},
+    {tj: "хама, хар кас", en: "everyone"}, {tj: "бузург, азим", en: "great"},
+    {tj: "аз они вай (мард)", en: "his"}, {tj: "аз они вай (зан)", en: "her"},
+    {tj: "гарм", en: "hot"}, {tj: "шавхар", en: "husband"},
+    {tj: "кози, довар", en: "judge"}, {tj: "аз они вай (хайвон)", en: "its"},
+    {tj: "зиндаги кардан", en: "live"}, {tj: "пул", en: "money"},
+    {tj: "нав", en: "new"}, {tj: "аз они мо", en: "our"},
+    {tj: "шим", en: "pants"}, {tj: "шабнишини", en: "party"},
+    {tj: "хеле бисер", en: "very much"}, {tj: "хона (квартира)", en: "apartment"},
+    {tj: "бад, сахт", en: "badly"}, {tj: "харду", en: "both"},
+    {tj: "боэхтиет", en: "careful"}, {tj: "сент", en: "cent"},
+    {tj: "универмаг", en: "department store"}, {tj: "доллар", en: "dollar"},
+    {tj: "дувоздах дона", en: "dozen"}, {tj: "мактаби миена", en: "elementary school"},
+    {tj: "хис кардан", en: "feel"}, {tj: "дугона", en: "girlfriend"},
+    {tj: "голф", en: "golf"}, {tj: "соат (час)", en: "hour"},
+    {tj: "чандто", en: "how many"}, {tj: "мактаби миена", en: "junior school"},
+    {tj: "охирин", en: "last"}, {tj: "ичозат додан", en: "let"},
+    {tj: "хурд, майда", en: "little"}, {tj: "зиндаги, хает", en: "living"},
+    {tj: "хуроки пешин", en: "lunch"}, {tj: "маьно доштан", en: "mean"},
+    {tj: "дакика", en: "minute"}, {tj: "ракам", en: "number"},
+    {tj: "танхо", en: "only"}, {tj: "рафики мактуби", en: "pen pal"},
+    {tj: "телефон", en: "phone"}, {tj: "хавопаймо", en: "plane"},
+    {tj: "чоряк", en: "quarter"}, {tj: "сендвич", en: "sandwich"}
+],
 };
 
 let progress = JSON.parse(localStorage.getItem('userProgress')) || { unlocked: 1, history: {} };
